@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Sugestão</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Projeto Melhoria Contínua Digital</h1>
+        <p>Registre aqui sua sugestão de melhoria.</p>
+        <hr>
+        <form id="sugestao-form">
+            
+            <div>
+                <label for="nome-colaborador">Seu Nome:</label>
+                <input type="text" id="nome-colaborador" name="nome-colaborador" disabled> 
+            </div>
+
+            <div>
+                <label for="setor">Setor que será impactado:</label>
+                <select id="setor" name="setor" required>
+                    <option value="">Selecione um setor...</option>
+                    <optgroup label="Escritório">
+                        <option value="Compras">Compras</option>
+                        <option value="Departamento Pessoal">Departamento Pessoal</option>
+                        <option value="Recursos Humanos">Recursos Humanos</option>
+                        <option value="E-Commerce">E-Commerce</option>
+                        <option value="Fiscal">Fiscal</option>
+                        <option value="Design de Interiores">Design de Interiores</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Jovem Aprendiz">Jovem Aprendiz</option>
+                        <option value="Inteligência de Mercado">Inteligência de Mercado</option>
+                        <option value="Design Gráfico">Design Gráfico</option>
+                        <option value="Tecnologia da Informação">Tecnologia da Informação</option>
+                        <option value="Controladoria">Controladoria</option>
+                        <option value="Recepção">Recepção</option>
+                        <option value="Almoxarifado">Almoxarifado</option>
+                    </optgroup>
+                    <optgroup label="Escritório Financeiro">
+                        <option value="Contas a pagar">Contas a pagar</option>
+                        <option value="Contas a Receber">Contas a Receber</option>
+                        <option value="Cobrança">Cobrança</option>
+                    </optgroup>
+                    <optgroup label="Comercial (Lojas)">
+                        <option value="Gerência Comercial">Gerência Comercial</option>
+                        <option value="Subgerencia Comercial">Subgerencia Comercial</option>
+                        <option value="Vendas">Vendas</option>
+                        <option value="Equipe Growth (Vendas Especializadas)">Equipe Growth (Vendas Especializadas)</option>
+                        <option value="Expedição">Expedição</option>
+                        <option value="Ajudante de Loja">Ajudante de Loja</option>
+                        <option value="Estoquista de Loja">Estoquista de Loja</option>
+                        <option value="Serviços Gerais">Serviços Gerais</option>
+                    </optgroup>
+                    <optgroup label="Logística (CD)">
+                        <option value="Gerencia de Logistica">Gerencia de Logistica</option>
+                        <option value="Recebimento">Recebimento</option>
+                        <option value="Gerenciamento de Estoque">Gerenciamento de Estoque</option>
+                        <option value="Cerâmica">Cerâmica</option>
+                        <option value="2º piso miudezas">2º piso miudezas</option>
+                        <option value="Tinta/Forro/Gesso/ Piso Laminado">Tinta/Forro/Gesso/ Piso Laminado</option>
+                        <option value="Sacaria/Tubo/Caixa d'água/Palete fechado">Sacaria/Tubo/Caixa d'água/Palete fechado</option>
+                        <option value="Roteirização">Roteirização</option>
+                        <option value="Garantia">Garantia</option>
+                        <option value="Miudezas para a Entrega">Miudezas para a Entrega</option>
+                        <option value="Carregamento">Carregamento</option>
+                        <option value="Motorista">Motorista</option>
+                        <option value="Ajudante do Motorista">Ajudante do Motorista</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div>
+                <label for="acontecimentos">Acontecimentos/Sugestões:</label>
+                <textarea id="acontecimentos" name="acontecimentos" rows="4" required></textarea>
+            </div>
+
+            <div>
+                <label for="solucao">Sugestão de solução:</label>
+                <textarea id="solucao" name="solucao" rows="4"></textarea>
+            </div>
+            
+            <div>
+                <label for="observacoes">Observações (opcional):</label>
+                <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+            </div>
+
+            <div>
+                <label for="anexo">Anexar foto ou documento (opcional, V2):</label>
+                <input type="file" id="anexo" name="anexo" disabled>
+            </div>
+
+            <button type="submit">Enviar Sugestão</button>
+        </form>
+        
+        <p id="mensagem-sugestao"></p>
+    </div>
+
+    <script src="nova-sugestao.js"></script>
+</body>
+</html>

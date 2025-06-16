@@ -1,0 +1,221 @@
+/* Estilos para o corpo todo da página */
+body {
+  font-family: sans-serif;
+  background-color: #f4f7f6; /* Um cinza bem claro para o fundo */
+  color: #141b4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilo para o título principal h1 */
+h1 {
+  color: #141b4d;
+  text-align: center;
+}
+
+/* Estilo para o nosso botão */
+button {
+  background-color: #ff7a15;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Estilizando a "caixa" que usamos em todas as telas */
+.login-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Um pouco maior para o formulário detalhado */
+}
+
+/* Organizando os campos do formulário */
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.button-link {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #141b4d; /* Botão secundário em azul */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.button-link:hover {
+    opacity: 0.9;
+}
+/* --- Estilos para a lista de sugestões --- */
+.sugestao-item {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: box-shadow 0.2s;
+}
+
+.sugestao-item:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.sugestao-item p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Estilo para a barrinha lateral de status com base na classe */
+.sugestao-item.status-pendente { border-left: 5px solid #ffc107; } /* Amarelo */
+.sugestao-item.status-viavel { border-left: 5px solid #28a745; } /* Verde */
+.sugestao-item.status-rejeitada { border-left: 5px solid #dc3545; } /* Vermelho */
+/* Adicione outros status conforme necessário */
+
+/* Remove a decoração padrão dos links da lista */
+.sugestao-link {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Faz o link usar a cor do texto normal */
+}
+/* --- Estilos para os botões de Ação --- */
+.botoes-acao {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.botao-viavel {
+  background-color: #28a745; /* Verde */
+}
+.botao-nao-viavel {
+  background-color: #dc3545; /* Vermelho */
+}/* --- Estilos para a Tabela de Usuários --- */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.user-table th {
+    background-color: #f2f2f2;
+    color: #141b4d;
+}
+.user-table select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+/* --- Estilos para os STATUS DAS TAREFAS --- */
+
+/* Cinza para tarefas 'a_fazer' */
+.sugestao-item.status-a_fazer { 
+    border-left: 5px solid #6c757d; 
+}
+
+/* Azul para tarefas 'em_andamento' */
+.sugestao-item.status-em_andamento { 
+    border-left: 5px solid #007bff;
+}
+
+/* Verde para tarefas 'concluido' ou 'finalizada' */
+.sugestao-item.status-concluido, .sugestao-item.status-finalizada { 
+    border-left: 5px solid #28a745;
+}
+
+/* Laranja para tarefas 'parado' */
+.sugestao-item.status-parado { 
+    border-left: 5px solid #fd7e14;
+}
+/* Cor para o novo status 'aguardando_validacao' */
+.sugestao-item.status-aguardando_validacao { 
+    border-left: 5px solid #6f42c1; /* Roxo */
+}
+/* --- Cores para os Botões de Validação do Líder --- */
+
+.botao-aprovar {
+    background-color: #28a745; /* Verde para ações de sucesso/aprovação */
+}
+
+.botao-reprovar {
+    background-color: #dc3545; /* Vermelho para ações de perigo/rejeição */
+}
+
+/* Efeito hover para os novos botões também */
+.botao-aprovar:hover, .botao-reprovar:hover {
+    opacity: 0.9;
+}
+
+/* --- Cores para os Botões de Ação do Admin --- */
+
+/* O nome da classe vem do HTML que criamos */
+.botao-recuperar {
+    background-color: #28a745; /* Verde "vá em frente" */
+}
+
+.botao-arquivar {
+    background-color: #dc3545; /* Vermelho "ação final/perigosa" */
+}
+
+/* Efeito hover para os novos botões */
+.botao-recuperar:hover, .botao-arquivar:hover {
+    opacity: 0.9;
+}
+
+/* --- Estilo para a Etiqueta de Edição do Admin --- */
+.editado-badge {
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #6f42c1; /* Um roxo para destacar */
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle; /* Alinha a etiqueta com o texto */
+}

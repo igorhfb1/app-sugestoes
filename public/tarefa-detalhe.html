@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes da Sugestão</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 id="sugestao-problema">Carregando detalhes...</h1>
+        <hr>
+        <div id="detalhes-container">
+            <p><strong>Status:</strong> <span id="sugestao-status" class="status-badge">...</span></p>
+            <p><strong>Setor Impactado:</strong> <span id="sugestao-setor">...</span></p>
+            <h3>Descrição do Problema/Ideia</h3>
+            <textarea id="sugestao-descricao-completa" rows="4" disabled></textarea>
+            <h3>Solução Proposta</h3>
+            <textarea id="sugestao-solucao" rows="4" disabled></textarea>
+            <h3>Observações</h3>
+            <textarea id="sugestao-observacoes" rows="3" disabled></textarea>
+        </div>
+
+        <div id="validacao-lider" style="display: none;">
+            <hr>
+            <h3>Ações do Líder</h3>
+            <div class="botoes-acao">
+                <button class="botao-acao botao-viavel" id="btn-viavel">Viável</button>
+                <button class="botao-acao botao-nao-viavel" id="btn-nao-viavel">Não Viável</button>
+            </div>
+        </div>
+
+        <div id="acoes-admin" style="display: none;">
+            <hr>
+            <h3>Ação do Administrador</h3>
+            <p><strong>Parecer do Líder:</strong> <em id="justificativa-lider">...</em></p>
+            <div class="botoes-acao">
+                <button class="botao-acao botao-recuperar" id="btn-recuperar">Recuperar e Devolver</button>
+                <button class="botao-acao botao-arquivar" id="btn-arquivar">Arquivar Sugestão</button>
+            </div>
+        </div>
+
+        <a href="#" id="link-voltar" class="button-link" style="margin-top: 20px;">Voltar ao Painel</a>
+    </div>
+    <script src="sugestao-detalhe.js"></script> 
+</body>
+</html>

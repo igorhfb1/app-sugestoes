@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Nova Tarefa</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Criar Nova Tarefa</h1>
+        <p>Selecione uma sugestão aprovada e descreva a tarefa a ser executada.</p>
+        <hr>
+
+        <form id="form-nova-tarefa">
+            <div>
+                <label for="sugestao-associada">Vincular à Sugestão Aprovada:</label>
+                <select id="sugestao-associada" required>
+                    <option value="">Carregando sugestões viáveis...</option>
+                </select>
+            </div>
+            <div>
+                <label for="tarefa-titulo">Título da Tarefa:</label>
+                <input type="text" id="tarefa-titulo" required>
+            </div>
+            <div>
+                <label for="tarefa-descricao">Descrição da Tarefa:</label>
+                <textarea id="tarefa-descricao" rows="3" required></textarea>
+            </div>
+            <div>
+                <label for="tarefa-responsavel">Responsável:</label>
+                <select id="tarefa-responsavel" required>
+                    <option value="">Carregando colaboradores...</option>
+                </select>
+            </div>
+            <div>
+                <label for="tarefa-prazo">Prazo:</label>
+                <input type="date" id="tarefa-prazo" required>
+            </div>
+            <button type="submit">Criar Tarefa</button>
+        </form>
+        <p id="mensagem-tarefa"></p>
+
+        <a href="/lider.html" class="button-link" style="margin-top: 20px;">Voltar ao Painel do Líder</a>
+    </div>
+
+    <script src="criar-tarefa.js"></script>
+</body>
+</html>

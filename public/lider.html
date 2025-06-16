@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel do Líder</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 id="welcome-message">Painel de Liderança</h1>
+        <p>Gerencie o fluxo de sugestões e acompanhe as tarefas.</p>
+        <hr>
+
+        <a href="/criar-tarefa.html" class="button-link" style="margin-bottom: 30px;">
+            + Criar Nova Tarefa
+        </a>
+
+        <h3>Sugestões Pendentes de Análise</h3>
+        <div id="lista-sugestoes-pendentes">
+            <p>Carregando...</p>
+        </div>
+        
+        <hr style="margin-top: 30px;">
+
+        <h3>Sugestões Aprovadas (Prontas para Planejar)</h3>
+        <div id="lista-sugestoes-viaveis">
+            <p>Carregando...</p>
+        </div>
+
+        <hr style="margin-top: 30px;">
+        <h3>Acompanhamento de Tarefas Delegadas</h3>
+        <div id="lista-tarefas-delegadas">
+            <p>Carregando...</p>
+        </div>
+    </div>
+
+    <script src="lider.js"></script>
+</body>
+</html>
